@@ -3,126 +3,210 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Sarthak's Art Gallery</title>
+  <title>Art Gallery</title>
   <link rel="stylesheet" href="styles.css">
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Poppins:wght@300;500&display=swap" rel="stylesheet">
 </head>
 <body>
   <header>
-    <div class="container">
-      <h1 class="logo">🎨 Sakshi's Art Gallery</h1>
-      <nav>
-        <ul>
-          <li><a href="#about">About</a></li>
-          <li><a href="#categories">Categories</a></li>
-          <li><a href="#gallery">Gallery</a></li>
-          <li><a href="#contact">Contact</a></li>
-        </ul>
-      </nav>
-    </div>
+    <div class="logo">Art Gallery</div>
+    <nav>
+      <a href="#gallery">Gallery</a>
+      <a href="#about">About</a>
+      <a href="#contact">Contact</a>
+    </nav>
   </header>
 
   <section id="hero">
-    <div class="hero-content">
-      <img src="hero-image.jpg" alt="Hero Art" class="hero-image">
-      <h2>Bring Your Walls to Life with Art</h2>
-      <p>Amazing, colorful, and professional art pieces for every space.</p>
-      <a href="#gallery" class="btn">Explore Collection</a>
+    <h1>Welcome to the Art Gallery</h1>
+    <p>Discover and buy beautiful artworks</p>
+  </section>
+
+  <section id="gallery" class="gallery">
+    <h2>Featured Artworks</h2>
+    <div class="categories">
+      <button onclick="filterCategory('all')">All</button>
+      <button onclick="filterCategory('abstract')">Abstract</button>
+      <button onclick="filterCategory('landscape')">Landscape</button>
+      <button onclick="filterCategory('portrait')">Portrait</button>
+    </div>
+
+    <!-- Artwork Grid -->
+    <div class="artwork" data-category="abstract">
+      <img src="1.jpeg" alt="Painting 1">
+      <div class="info">
+        <h3>Abstract 1</h3>
+        <p>$200</p>
+        <button onclick="viewDetails('art1')">View Details</button>
+      </div>
+    </div>
+    <div class="artwork" data-category="landscape">
+      <img src="2.jpeg" alt="Painting 2">
+      <div class="info">
+        <h3>Landscape 1</h3>
+        <p>$300</p>
+        <button onclick="viewDetails('art2')">View Details</button>
+      </div>
+    </div>
+    <div class="artwork" data-category="portrait">
+      <img src="3.jpeg" alt="Painting 3">
+      <div class="info">
+        <h3>Portrait 1</h3>
+        <p>$250</p>
+        <button onclick="viewDetails('art3')">View Details</button>
+      </div>
+    </div>
+    <div class="artwork" data-category="abstract">
+      <img src="4.webp" alt="Painting 4">
+      <div class="info">
+        <h3>Abstract 2</h3>
+        <p>$220</p>
+        <button onclick="viewDetails('art4')">View Details</button>
+      </div>
+    </div>
+    <div class="artwork" data-category="landscape">
+      <img src="5.webp" alt="Painting 5">
+      <div class="info">
+        <h3>Landscape 2</h3>
+        <p>$320</p>
+        <button onclick="viewDetails('art5')">View Details</button>
+      </div>
+    </div>
+    <div class="artwork" data-category="portrait">
+      <img src="6.jpg" alt="Painting 6">
+      <div class="info">
+        <h3>Portrait 2</h3>
+        <p>$400</p>
+        <button onclick="viewDetails('art6')">View Details</button>
+      </div>
+    </div>
+    <div class="artwork" data-category="abstract">
+      <img src="7.jpg" alt="Painting 7">
+      <div class="info">
+        <h3>Abstract 3</h3>
+        <p>$180</p>
+        <button onclick="viewDetails('art7')">View Details</button>
+      </div>
+    </div>
+    <div class="artwork" data-category="landscape">
+      <img src="8.jpg" alt="Painting 8">
+      <div class="info">
+        <h3>Landscape 3</h3>
+        <p>$275</p>
+        <button onclick="viewDetails('art8')">View Details</button>
+      </div>
+    </div>
+    <div class="artwork" data-category="portrait">
+      <img src="9.jpg" alt="Painting 9">
+      <div class="info">
+        <h3>Portrait 3</h3>
+        <p>$350</p>
+        <button onclick="viewDetails('art9')">View Details</button>
+      </div>
+    </div>
+    <div class="artwork" data-category="abstract">
+      <img src="10.jpg" alt="Painting 10">
+      <div class="info">
+        <h3>Abstract 4</h3>
+        <p>$250</p>
+        <button onclick="viewDetails('art10')">View Details</button>
+      </div>
+    </div>
+    <div class="artwork" data-category="landscape">
+      <img src="11.jpg" alt="Painting 11">
+      <div class="info">
+        <h3>Landscape 4</h3>
+        <p>$400</p>
+        <button onclick="viewDetails('art11')">View Details</button>
+      </div>
+    </div>
+    <div class="artwork" data-category="portrait">
+      <img src="12.jpg" alt="Painting 12">
+      <div class="info">
+        <h3>Portrait 4</h3>
+        <p>$450</p>
+        <button onclick="viewDetails('art12')">View Details</button>
+      </div>
+    </div>
+    <div class="artwork" data-category="abstract">
+      <img src="13.jpg" alt="Painting 13">
+      <div class="info">
+        <h3>Abstract 5</h3>
+        <p>$180</p>
+        <button onclick="viewDetails('art13')">View Details</button>
+      </div>
+    </div>
+    <div class="artwork" data-category="landscape">
+      <img src="14.jpg" alt="Painting 14">
+      <div class="info">
+        <h3>Landscape 5</h3>
+        <p>$290</p>
+        <button onclick="viewDetails('art14')">View Details</button>
+      </div>
+    </div>
+    <div class="artwork" data-category="portrait">
+      <img src="15.jpg" alt="Painting 15">
+      <div class="info">
+        <h3>Portrait 5</h3>
+        <p>$320</p>
+        <button onclick="viewDetails('art15')">View Details</button>
+      </div>
+    </div>
+    <div class="artwork" data-category="abstract">
+      <img src="16.jpg" alt="Painting 16">
+      <div class="info">
+        <h3>Abstract 6</h3>
+        <p>$220</p>
+        <button onclick="viewDetails('art16')">View Details</button>
+      </div>
+    </div>
+    <div class="artwork" data-category="landscape">
+      <img src="17.jpg" alt="Painting 17">
+      <div class="info">
+        <h3>Landscape 6</h3>
+        <p>$310</p>
+        <button onclick="viewDetails('art17')">View Details</button>
+      </div>
+    </div>
+    <div class="artwork" data-category="portrait">
+      <img src="18.jpg" alt="Painting 18">
+      <div class="info">
+        <h3>Portrait 6</h3>
+        <p>$380</p>
+        <button onclick="viewDetails('art18')">View Details</button>
+      </div>
+    </div>
+    <div class="artwork" data-category="abstract">
+      <img src="19.jpg" alt="Painting 19">
+      <div class="info">
+        <h3>Abstract 7</h3>
+        <p>$200</p>
+        <button onclick="viewDetails('art19')">View Details</button>
+      </div>
+    </div>
+    <div class="artwork" data-category="landscape">
+      <img src="20.jpg" alt="Painting 20">
+      <div class="info">
+        <h3>Landscape 7</h3>
+        <p>$350</p>
+        <button onclick="viewDetails('art20')">View Details</button>
+      </div>
     </div>
   </section>
 
   <section id="about">
-    <div class="container">
-      <h2>About Me</h2>
-      <p>I'm Sarthak, a passionate artist bringing stories to life through vibrant colors and imaginative designs. My art is created to inspire, relax, and beautify your surroundings.</p>
-    </div>
-  </section>
-
-  <section id="categories">
-    <div class="container">
-      <h2>Categories</h2>
-      <div class="category-container">
-        <div class="category" style="background: linear-gradient(135deg, #ff9a9e, #fad0c4);">
-          <h3>Abstract</h3>
-        </div>
-        <div class="category" style="background: linear-gradient(135deg, #a1c4fd, #c2e9fb);">
-          <h3>Nature</h3>
-        </div>
-        <div class="category" style="background: linear-gradient(135deg, #ffecd2, #fcb69f);">
-          <h3>Portraits</h3>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <section id="gallery">
-    <div class="container">
-      <h2>Gallery</h2>
-      <div class="gallery-grid">
-        <!-- Abstract Images -->
-        <div class="painting">
-          <img src="2.jpeg" alt="Abstract Painting 1">
-          <p>Abstract Art #1</p>
-          <button>Buy Now</button>
-        </div>
-        <div class="painting">
-          <img src="3.jpeg" alt="Abstract Painting 2">
-          <p>Abstract Art #2</p>
-          <button>Buy Now</button>
-        </div>
-
-        <!-- Nature Images -->
-        <div class="painting">
-          <img src="4.webp" alt="Nature Painting 1">
-          <p>Nature Art #1</p>
-          <button>Buy Now</button>
-        </div>
-        <div class="painting">
-          <img src="5.webp" alt="Nature Painting 2">
-          <p>Nature Art #2</p>
-          <button>Buy Now</button>
-        </div>
-
-        <!-- Portrait Images -->
-        <div class="painting">
-          <img src="6.jpg" alt="Portrait Painting 1">
-          <p>Portrait Art #1</p>
-          <button>Buy Now</button>
-        </div>
-        <div class="painting">
-          <img src="7.jpg" alt="Portrait Painting 2">
-          <p>Portrait Art #2</p>
-          <button>Buy Now</button>
-        </div>
-
-        <!-- Additional Images -->
-        <div class="painting">
-          <img src="8.jpg" alt="Special Art 1">
-          <p>Special Art #1</p>
-          <button>Buy Now</button>
-        </div>
-        <div class="painting">
-          <img src="9.jpg" alt="Special Art 2">
-          <p>Special Art #2</p>
-          <button>Buy Now</button>
-        </div>
-      </div>
-    </div>
+    <h2>About Us</h2>
+    <p>We showcase a variety of beautiful and unique art pieces from talented artists around the world.</p>
   </section>
 
   <section id="contact">
-    <div class="container">
-      <h2>Contact Me</h2>
-      <p>Have questions or custom orders? Get in touch with me today!</p>
-      <p><strong>Email:</strong> sakshi@gmail.com</p>
-      <p><strong>Phone:</strong> +91-8087478287</p>
-    </div>
+    <h2>Contact Us</h2>
+    <p>Email: info@artgallery.com</p>
   </section>
 
   <footer>
-    <div class="container">
-      <p>&copy; 2024 Sarthak's Art Gallery. Designed with 💖.</p>
-    </div>
+    <p>&copy; 2024 Art Gallery. All rights reserved.</p>
   </footer>
+
+  <script src="scripts.js"></script>
 </body>
 </html>
